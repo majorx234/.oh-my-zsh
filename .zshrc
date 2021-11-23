@@ -65,10 +65,7 @@ alias grepl='grep -rnIi $1 --color'
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-#. "/opt/ros/indigo/setup.zsh"
-#. "/home/major/ros_catkin_ws/devel/setup.zsh"       
-#. "/home/major/ros_catkin_ws/devel_isolated/quanjo_navcon/setup.zsh"
-#. "/home/major/ros_catkin_ws/devel_isolated/stageros_synced4/setup.zsh"
+export PYTHONPATH=/usr/lib/python3.9/site-packages
 
 source ~/.zsh_aliases
 eval $(thefuck --alias)
@@ -80,9 +77,5 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-# python virtual env wrapper stuff:
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-
-export ROS_IP=ros-workstation-linux.local; export ROS_HOSTNAME=ros-workstation-linux.local; export ROS_MASTER_URI=http://ros-workstation-linux.local:11311
-
+# calc plugin
+source $HOME/.oh-my-zsh/plugins/calc/calc.plugin.zsh
